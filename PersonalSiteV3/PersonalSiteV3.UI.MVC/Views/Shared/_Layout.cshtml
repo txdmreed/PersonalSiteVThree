@@ -1,44 +1,148 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deborah Reed Personal Portfolio</title>
+    <meta content="Personal Portfolio for Web Developer Deborah Dee Reed, Freelancer, Ready for hire" name="description">
+    <meta content="Deborah Reed, Dee Reed, Deborah Whitlock Reed, Web Developer for Hire, Dee Writes Code" name="keywords">
+    <link rel="shortcut icon" href="/favicon (4).ico" type="image/x-icon">
+    <link rel="icon" href="~/favicon (5).ico" type="image/x-icon">
+    <link href="~/Content/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
+    <link href="~/Content/fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
+    <link href="~/Content/css/templatemo-diagoona.css" rel="stylesheet" />
+    <!--
+
+    TemplateMo 550 Diagoona
+
+    https://templatemo.com/tm-550-diagoona
+
+    -->
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+
+<body><div>testing</div>
+    <div class="tm-container">
+        <div>
+            <div class="tm-row pt-4">
+                <div class="tm-col-left">
+                    <div class="tm-site-header media">
+                        <img class="mt-1 tm-logo col-sm-3 col-md-2" src="~/Content/Images/Faith3.png" alt="small, happy dog" />
+                        <div class="media-body">
+                            <h1 class="tm-sitename">
+                                <strong>
+                                    <em>
+                                        Have a<br /> Little<br /> Faith!
+                                    </em>
+                                </strong>
+                            </h1>
+
+                        </div>
+                    </div>
+                </div>
+                @*@{
+                        //variables to store current controller, action, and route
+                        var currentController = ViewContext.RouteData.Values["controller"] ?? "Home";
+                        var currentAction = ViewContext.RouteData.Values["action"] ?? "Index";
+                        var currentRoute = (currentController + "-" + currentAction).ToLower();
+                    }*@
+                <div class="tm-col-right">
+                    <nav class="navbar navbar-expand-lg" id="tm-main-nav">
+                        <button class="navbar-toggler toggler-example mr-0 ml-auto" id="nav-container" type="button"
+                                data-toggle="collapse" data-target="#navbar-nav"
+                                aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                            @*<span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>*@
+                            <span><i class="fas fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                            <ul class="navbar-nav text-uppercase">
+                                @* <li class="@Html.IsActive("Home", "Index")">@Html.ActionLink("Home", "Index", "Home")</li>
+                                    <li class="@Html.IsActive("Home", "About")">@Html.ActionLink("About", "About", "Home")</li>
+                                    <li class="@Html.IsActive("Home", "Contact")">@Html.ActionLink("Contact", "Contact", "Home")</li> *@
+                                <!--Html.IsActive("Home", "Index")-->
+                                <li class="active nav-item">
+                                    @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link tm-nav-link" })
+                                    @*@Html.ActionLink("Home", "Index", "Home", null, new { @class = currentRoute == "home-index" ? "active nav-link tm-nav-link" : "nav-link tm-nav-link" })
+                                        @{ if (currentRoute == "home-index")
+                                            {<span class="sr-only">(current)</span>
+                                            } }*@
+                                </li>
+
+                                @*Html.IsActive("Home", "About")*@
+                                <li class=" nav-item">@Html.ActionLink("Resume", "Index", "About", null, new { @class = "nav-link tm-nav-link" })</li>
+                                @* ABOUT is my resume section. The links are to the About page. *@
+
+                                @*@Html.ActionLink("Resume", "About", "Home", null, new { @class = currentRoute == "home-about" ? "active nav-link tm-nav-link" : "nav-link tm-nav-link" })
+                                    @{ if (currentRoute == "home-about")
+                                        {<span class="sr-only">(current)</span>
+                                        } }*@
+
+                                @*Html.IsActive("Portfolio", "Portfolio")*@
+
+                                <li class=" nav-item">@Html.ActionLink("Portfolio", "Index", "Portfolio", null, new { @class = "nav-link tm-nav-link" })</li>
+
+                                @*<li class="nav-item">
+                                        @Html.ActionLink("Portfolio", "Index", "Portfolio", null, new { @class = currentRoute == "Portfolio-Index" ? "active nav-link tm-nav-link" : "nav-link tm-nav-link" })
+                                        @{ if (currentRoute == "Portfolio-Index")
+                                            {<span class="sr-only">(current)</span>
+                                            } }
+                                    </li>*@
+
+                                <li class="nav-item">@Html.ActionLink("Links", "Index", "Link", null, new { @class = "nav-link tm-nav-link" })</li>
+
+                                @*@Html.IsActive("Home", "Contact")*@
+                                <li class="nav-item">@Html.ActionLink("Contact", "Index", "Contact", null, new { @class = "nav-link tm-nav-link" })</li>
+
+                                @*@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = currentRoute == "home-contact" ? "active nav-link tm-nav-link" : "nav-link tm-nav-link" })
+                                    @{ if (currentRoute == "home-contact")
+                                        {<span class="sr-only">(current)</span>
+                                        } }*@
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <div class="tm-row">
+            <div class="tm-col-left"></div>
+            <main class="tm-col-right">
+                @RenderBody()
+            </main>
+        </div>
+        <div class="tm-row">
+            <div class="tm-col-left text-center">
+                <ul class="tm-bg-controls-wrapper"></ul>
+            </div>
+            <div class="tm-col-right tm-col-footer">
+                <footer class="tm-site-footer text-right">
+                    <p class="mb-0">
+                        Copyright 2020 Deborah Reed
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+                        | Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-text-link">TemplateMo</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Diagonal background design -->
+        <div class="tm-bg">
+            <div class="tm-bg-left"></div>
+            <div class="tm-bg-right"></div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/typed/CustomJS.js"></script>
+    <script src="~/Scripts/typed/typed.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.backstretch.min.js"></script>
+    <script src="~/Scripts/templatemo-script.js"></script>
+    @RenderSection("scripts", false)
 </body>
 </html>
