@@ -13,5 +13,17 @@ namespace PersonalSiteV3.UI.MVC.Controllers
         {
             return View();
         }
+
+        public ActionResult Details()
+        {
+            return View();
+        }
+
+        public ActionResult UkcDetails()
+        {
+            return View();
+        }
+
+
     }
 }

@@ -3,16 +3,26 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Deborah Reed" />
     <title>Deborah Reed Personal Portfolio</title>
-    <meta content="Personal Portfolio for Web Developer Deborah Dee Reed, Freelancer, Ready for hire" name="description">
-    <meta content="Deborah Reed, Dee Reed, Deborah Whitlock Reed, Web Developer for Hire, Dee Writes Code" name="keywords">
-    <link rel="shortcut icon" href="/favicon (4).ico" type="image/x-icon">
-    <link rel="icon" href="~/favicon (5).ico" type="image/x-icon">
-    <link href="~/Content/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <meta content="Personal Portfolio for Web Developer Deborah Dee Reed, Freelancer, Ready for hire" name="description" />
+    <meta content="Deborah Reed, Dee Reed, Deborah Whitlock Reed, Web Developer for Hire, Dee Writes Code" name="keywords" />
+    <!-- Vendor CSS Files For Resume Page -->
+    <link href="~/Content/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/Content/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/Content/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="~/Content/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/Content/assets/vendor/aos/aos.css" rel="stylesheet">
+    <!--Favicons -->
+    <link rel="shortcut icon" href="/favicon (4).ico" type="image/x-icon" />
+    <link rel="icon" href="~/favicon (5).ico" type="image/x-icon" />
+    <link href="~/Content/ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="~/Content/assets/css/style.css" rel="stylesheet" />
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
     <link href="~/Content/fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
     <link href="~/Content/css/templatemo-diagoona.css" rel="stylesheet" />
@@ -25,7 +35,7 @@
     -->
 </head>
 
-<body><div>testing</div>
+<body>
     <div class="tm-container">
         <div>
             <div class="tm-row pt-4">
@@ -44,38 +54,51 @@
                         </div>
                     </div>
                 </div>
-                @*@{
-                        //variables to store current controller, action, and route
-                        var currentController = ViewContext.RouteData.Values["controller"] ?? "Home";
-                        var currentAction = ViewContext.RouteData.Values["action"] ?? "Index";
-                        var currentRoute = (currentController + "-" + currentAction).ToLower();
-                    }*@
                 <div class="tm-col-right">
                     <nav class="navbar navbar-expand-lg" id="tm-main-nav">
                         <button class="navbar-toggler toggler-example mr-0 ml-auto" id="nav-container" type="button"
                                 data-toggle="collapse" data-target="#navbar-nav"
                                 aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
-                            @*<span class="bar"></span>
-                                <span class="bar"></span>
-                                <span class="bar"></span>*@
                             <span><i class="fas fa-bars"></i></span>
                         </button>
                         <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
                             <ul class="navbar-nav text-uppercase">
+
+                                <li class="nav-item"> @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link tm-nav-link" })</li>
+
+                                <li class="nav-item">@Html.ActionLink("Resume", "Index", "About", null, new { @class = "nav-link tm-nav-link" })</li>
+
+                                <li class="nav-item">@Html.ActionLink("Portfolio", "Index", "Portfolio", null, new { @class = "nav-link tm-nav-link" })</li>
+
+                                <li class="nav-item">@Html.ActionLink("Links", "Index", "Link", null, new { @class = "nav-link tm-nav-link" })</li>
+
+                                <li class="nav-item">@Html.ActionLink("Contact", "Index", "Contact", null, new { @class = "nav-link tm-nav-link" })</li>
+
+
+                                <!-- #region nav notes -->
+                                @*@{
+                                        //variables to store current controller, action, and route
+                                        var currentController = ViewContext.RouteData.Values["controller"] ?? "Home";
+                                        var currentAction = ViewContext.RouteData.Values["action"] ?? "Index";
+                                        var currentRoute = (currentController + "-" + currentAction).ToLower();
+                                    }*@
+
+                                @*<span class="bar"></span>
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>*@
+
                                 @* <li class="@Html.IsActive("Home", "Index")">@Html.ActionLink("Home", "Index", "Home")</li>
                                     <li class="@Html.IsActive("Home", "About")">@Html.ActionLink("About", "About", "Home")</li>
                                     <li class="@Html.IsActive("Home", "Contact")">@Html.ActionLink("Contact", "Contact", "Home")</li> *@
+
                                 <!--Html.IsActive("Home", "Index")-->
-                                <li class="active nav-item">
-                                    @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link tm-nav-link" })
-                                    @*@Html.ActionLink("Home", "Index", "Home", null, new { @class = currentRoute == "home-index" ? "active nav-link tm-nav-link" : "nav-link tm-nav-link" })
-                                        @{ if (currentRoute == "home-index")
-                                            {<span class="sr-only">(current)</span>
-                                            } }*@
-                                </li>
+                                @*@Html.ActionLink("Home", "Index", "Home", null, new { @class = currentRoute == "home-index" ? "active nav-link tm-nav-link" : "nav-link tm-nav-link" })
+                                    @{ if (currentRoute == "home-index")
+                                        {<span class="sr-only">(current)</span>
+                                        } }*@
 
                                 @*Html.IsActive("Home", "About")*@
-                                <li class=" nav-item">@Html.ActionLink("Resume", "Index", "About", null, new { @class = "nav-link tm-nav-link" })</li>
+
                                 @* ABOUT is my resume section. The links are to the About page. *@
 
                                 @*@Html.ActionLink("Resume", "About", "Home", null, new { @class = currentRoute == "home-about" ? "active nav-link tm-nav-link" : "nav-link tm-nav-link" })
@@ -85,7 +108,6 @@
 
                                 @*Html.IsActive("Portfolio", "Portfolio")*@
 
-                                <li class=" nav-item">@Html.ActionLink("Portfolio", "Index", "Portfolio", null, new { @class = "nav-link tm-nav-link" })</li>
 
                                 @*<li class="nav-item">
                                         @Html.ActionLink("Portfolio", "Index", "Portfolio", null, new { @class = currentRoute == "Portfolio-Index" ? "active nav-link tm-nav-link" : "nav-link tm-nav-link" })
@@ -94,16 +116,13 @@
                                             } }
                                     </li>*@
 
-                                <li class="nav-item">@Html.ActionLink("Links", "Index", "Link", null, new { @class = "nav-link tm-nav-link" })</li>
-
                                 @*@Html.IsActive("Home", "Contact")*@
-                                <li class="nav-item">@Html.ActionLink("Contact", "Index", "Contact", null, new { @class = "nav-link tm-nav-link" })</li>
 
                                 @*@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = currentRoute == "home-contact" ? "active nav-link tm-nav-link" : "nav-link tm-nav-link" })
                                     @{ if (currentRoute == "home-contact")
                                         {<span class="sr-only">(current)</span>
                                         } }*@
-
+                                <!-- #endregion -->
                             </ul>
                         </div>
                     </nav>
@@ -137,6 +156,18 @@
             <div class="tm-bg-right"></div>
         </div>
     </div>
+    <script src="~/Content/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="~/Content/assets/vendor/php-email-form/validate.js"></script>
+    <script src="~/Content/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="~/Content/assets/vendor/counterup/counterup.min.js"></script>
+    <script src="~/Content/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/Content/assets/vendor/venobox/venobox.min.js"></script>
+    <script src="~/Content/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="~/Content/assets/vendor/typed.js/typed.min.js"></script>
+    <script src="~/Content/assets/vendor/aos/aos.js"></script>
+    <script src="~/Content/assets/js/main.js"></script>
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/typed/CustomJS.js"></script>
     <script src="~/Scripts/typed/typed.js"></script>
@@ -144,5 +175,27 @@
     <script src="~/Scripts/jquery.backstretch.min.js"></script>
     <script src="~/Scripts/templatemo-script.js"></script>
     @RenderSection("scripts", false)
+    <script>
+        //use the selector values found (or declared) in your style sheet for the active class 
+        //– for the code below your stylesheet would look like: .mainmenu ul li.selected a {//code}
+
+        $('.nav-item').each(function () {
+
+            //in this example the class is attached to the li, so you must go one level further to 
+            //check the href value of the anchor tag and ensure it matches what is found in the //browser URL
+
+            if ($(this).find('a').attr('href') == window.location.pathname) {
+
+                //if they match add the correct class name. $(this) refers to the li 
+                //(the last item in the DOM specified before the each function)
+
+                $(this).addClass('active');
+
+            }
+            if (window.location.pathname == 'home/index' || window.location.pathname == '/') {
+                $('#liHome').addClass('active');
+            }
+        });
+    </script>
 </body>
 </html>

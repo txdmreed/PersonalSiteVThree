@@ -1,14 +1,182 @@
 ﻿@{
-    ViewBag.Title = "Resume";
+    ViewBag.Title = "Getting to Know \"Dee\"";
 }
-<div>
-    <h2 class="resumetitle">@ViewBag.Title</h2>
-    <p class="resumePTag"> More Detailed Resume Availble Upon Request</p>
-</div>
-<div class="col-md-12">
+<h2>@ViewBag.Title</h2>
+<p id="p">Hey there, I am Deborah Reed. Most people call me Dee. I’m a full stack web-developer and a classic nerd. I’m an avid reader and I do a little writing as well. With any luck, you'll see me on the best sellers list one day. I also crochet and cosplay and my dogs are my world. I actually enjoy the challenge of training other people’s pets as well. That love of a challenge has given me a steady, yet eclectic work history, which you can see for yourself below.  While I loved these jobs, none of them really felt like the career I was searching for.  Then it was pointed out to me, in all these jobs, I was first, drawn to, and later, mastered the technologies available.  Ultimately this is what brought me to Web Development, and it’s the best decision I ever made.  That’s all about me, I’d love hear from you. Make sure to pop over to my Contacts page and let me know you were here.</p>
 
-    <img class="ResumeImg" src="~/Content/Images/ResumePic1.png" alt="Resume Information, Email for detailed copy."/>
-    <img class="ResumeImg" src="~/Content/Images/ResumePic2.png" alt="Resume Information, Email for detailed copy."/>
-    <img class="ResumeImg" src="~/Content/Images/ResumePic3.png" alt="Resume Information, Email for detailed copy."/>
-    <img class="ResumeImg" src="~/Content/Images/ResumePic4.png" alt="Resume Information, Email for detailed copy."/>
-</div>
+<!-- ======= Skills Section ======= -->
+
+<section id="skills" class="skills section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Skills</h2>
+            <p>You may notice, I do not claim a high proficiency in most skills.  This is for two reasons.<br /><strong>First</strong>, I am new to the developing game and thus I know I still have the world to learn.<br />How exciting is that!<br />And, <strong>second</strong>, as any master of their craft would tell you, there is always more to learn.</p>
+        </div>
+
+        <div class="row skills-content">
+
+            <div class="col-lg-6">
+
+                <div class="progress">
+                    <span class="skill">HTML <i class="val">75%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <span class="skill">CSS <i class="val">80%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <span class="skill">JavaScript <i class="val">60%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="progress">
+                    <span class="skill">Sql <i class="val">80%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <span class="skill">Collaboritive Ability <i class="val">90%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <span class="skill">Positive Under Pressure <i class="val">95%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- End Skills Section -->
+<!-- ======= Resume Section ======= -->
+
+<section id="resume" class="resume">
+
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Resume</h2>
+            <p class="resumePTag"><a href="~/Content/Images/DebsNewResume.pdf" target="_blank"> Click here for a more detailed Resume view.</a></p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="resume-title">Sumary</h3>
+                <div class="resume-item pb-0">
+                    <h4>Deborah Reed</h4>
+                    <ul>
+                        <li>Selected as Centriq Training’s Featured Developer Student for the month for the month of November.</li>
+                        <li>Solid foundational knowledge of designing and developing full-stack web applications using .NET framework.</li>
+                        <li>Situational Troubleshooting</li>
+                        <li>Strong knowledge in Sql Server</li>
+                        <li>Detail Oriented</li>
+                        <li>Creating and maintaining a fun, relaxed working atmosphere.</li>
+                    </ul>
+                </div>
+
+                <h3 class="resume-title">Technical Training &amp; Education</h3>
+                <div class="resume-item">
+                    <h4>Centriq Training Full Stack Web Development Track</h4>
+                    <h5 class="borders">8/20 - 12/20</h5>
+                    <p class="not-justified"><em>Centriq Training, Kansas City, MO</em></p>
+                    <p class="not-justified">Centriq is an IT technical training school. Their curriculum is specifically designed to deliver the most amount of information in a scaffolded format, to allow the student to go from a next to zero technical skills, to a fully qualified, IT professional, over the course of the four-month track.  I chose the Full Stack Web development track, and I am loving every day, despite the intense nature of the course.  </p>
+                </div>
+                <div class="resume-item">
+                    <h4>Associates of Arts, Early Childhood Education</h4>
+                    <h5 class="borders">Graduated 2012</h5>
+                    <p class="not-justified"><em>Kilgor College, Kilgore, TX</em></p>
+                </div>
+                <div class="resume-item">
+                    <h4>State Registered Massage Therapist</h4>
+                    <h5 class="borders">Graduated 2004, State Accredidation 2005</h5>
+                    <p class="not-justified"><em>Hands On Therapy, Longview, TX</em></p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="resume-title">Professional Experience</h3>
+                <div class="resume-item">
+                    <h4>Merchandiser III</h4>
+                    <h5 class="borders">2014 - 2019</h5>
+                    <p class="not-justified"><em>Nebraska Furniture Mart, The Colony, TX </em></p>
+                    <ul>
+                        <li>
+                            Trained new associates on the computer system, department upkeep, and organization.
+                        </li>
+                        <li>
+                            Recognized for excellent RAD numbers.
+                        </li>
+                        <li>
+                            Nominated twice for the President’s Award, a companywide achievement.
+                        </li>
+                        <li>
+                            Recognized in Take Ten spotlight, the company wide, newsletter for excellent customer service.
+                        </li>
+                    </ul>
+                </div>
+                <div class="resume-item">
+                    <h4>Area Rug Sales Associate</h4>
+                    <h5 class="borders">2012 - 2014</h5>
+                    <p class="not-justified"><em>Nebraska Furniture Mart, Kansas City, MO </em></p>
+                    <ul>
+                        <li>
+                            Collaborated with a team of motivated individuals that facilitated the flow of product to and from the sales
+                            floor daily.
+                        </li>
+                        <li>
+                            Mastered working in an inhouse developed, DOS based program for warehousing, and product
+                            movement.
+                        </li>
+                        <li>
+                            Created, and maintained excel spreadsheets and database information for daily stock checks and
+                            transfers.
+                        </li>
+                        <li>
+                            Participated in OpEx meetings and Kaizens to create SOPs for efficient practices for our division
+                        </li>
+                    </ul>
+                </div>
+                <div class="resume-item">
+                    <h4>Self-Employed Massage Therapist</h4>
+                    <h5 class="borders">2005 - 2012</h5>
+                    <p class="not-justified"><em>Kneaded Luxury, Longview, TX </em></p>
+                    <ul>
+                        <li>Worked slowly and relentlessly to develop and maintain a steady clientele base</li>
+                        <li>
+                            Traveled to different locations to do personalized, in-office or in-home massages for my clients.
+                        </li>
+                        <li>Managed my own expenses, taxes, and client files from my home office, with the help of my husband.  </li>
+                        <li>Exhibited excellent interpersonal skills and empathy to ensure my client’s needs were met.  </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End Resume Section -->
